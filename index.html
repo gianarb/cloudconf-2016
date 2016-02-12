@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>CloudConf - Parallel made easy</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Parallel made easy. My CloudConf 2016 talk about ZF3 and the split of our main repository to 50 different repositories">
+		<meta name="author" content="Gianluca Arbezzano">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -41,13 +41,297 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>CloudConf 2016</h1>
+					<h3>Parallel made easy</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small><a href="http://gianarb.it" target="_blank" >Gianluca Arbezzano</a> / <a target="_blank" href="http://currencyfair.com/">@ CurrencyFair</a></small>
 					</p>
 				</section>
 
+				<section>
+                    My my my
+				</section>
+
+				<section data-background="img/currencyfair.png">
+				</section>
+
+				<section>
+					<p>Parallel computing is a type of computation in which many
+                    calculations are carried out simultaneously, operating
+                    on the principle that large problems can often be divided
+                    into smaller ones, which are then solved at the same time.
+                    <small><a href="https://en.wikipedia.org/wiki/Parallel_computing" target="_blank">by. wikipedia</a></small>
+                    </p>
+				</section>
+
+				<section>
+					<p>
+                    <img src="img/serial-processing.jpg"/>
+                    <small>Image copyleft Hyde & Rugg, 2014, incorporating house icon from Wikimedia</small>
+                    </p>
+                     <aside class="notes">
+                         you are a builder<br>
+                         Red points are your start point and red point
+                    </aside>
+				</section>
+
+				<section>
+					<p>
+                    <img src="img/parallel-processing.jpg">
+                    <small>Image copyleft Hyde & Rugg, 2014, incorporating house icon from Wikimedia</small>
+                    </p>
+				</section>
+
+				<section>
+					<p>
+                    the builder must check to have enough wheelbarrows, trowels and people
+                    </p>
+				</section>
+
+				<section>
+					<p>
+                    For us <strong>easy</strong> because we has cloud computing.
+                    </p>
+				</section>
+
+				<section>
+                    <p>
+                        <backquote>
+                            Put another way, a five-person company can harvest 10,000
+                            servers with no infrastructure investment, all at the push
+                            of a button. That can be pretty disruptive to industries
+                            where computing power is everything.
+                        </backquote>
+                    </p>
+                    <p>
+                        <small>GreenButton ex. CTO Dave Fellows</small>
+                    </p>
+				</section>
+
+				<section>
+                    <h3>Case Study</h3>
+                    <p>
+                        We worked to split zendframework/zf2 repository and its
+                        history in different indipendent repositories
+                    </p>
+				</section>
+
+				<section>
+                    <h3>Why</h3>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">maintainability</li>
+                        <li class="fragment" data-fragment-index="2">component first</li>
+                        <li class="fragment" data-fragment-index="3">Remove old split flow based on git subtree</li>
+                    </ul>
+				</section>
+
+				<section>
+                    <h3>Numbers</h3>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">6 years of git's history</li>
+                        <li class="fragment" data-fragment-index="2">~27k commits, 67 releases, and over 700 contributors</li>
+                        <li class="fragment" data-fragment-index="3"> clean checkout is around 150MB</li>
+                    </ul>
+                    <p>
+                        <small><a href="https://mwop.net/blog/2015-05-15-splitting-components-with-git.html">by mwop's blogpost</a></small>
+                    </p>
+				</section>
+
+				<section>
+                    <h3>Results</h3>
+                    <p>50 repositories</p>
+                    <p></p>
+                    <p><strong>Zend\Http</strong> component repository ended up with ~1.7k
+                        commits, 50 releases, ~160 contributors, and a clean checkout clocks in at
+                        5.4MB</p>
+                    <p>
+                        <small><a href="https://mwop.net/blog/2015-05-15-splitting-components-with-git.html">by mwop's blogpost</a></small>
+                    </p>
+				</section>
+
+				<section>
+                    <h3>time</h3>
+                    <p>Between 5-12 hours</p>
+                    <p class="fragment" data-fragment-index="1">for each repositories</p>
+                    <p class="fragment" data-fragment-index="2"><img src="img/old-man.jpg"/></p>
+				</section>
+
+				<section>
+                    <iframe src="//giphy.com/embed/lh4SrOe05v8Fq" width="480" height="254" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                    <p><a href="http://giphy.com/gifs/lh4SrOe05v8Fq">via GIPHY</a></p>
+				</section>
+
+				<section>
+                    <p>Obvious! Each component could be split easy in parallel because the process is atomic, it doesn't require other.</p>
+				</section>
+
+				<section>
+                    <p>Made <strong>easy</strong> because after one email AWS allowed our account to power on 55 EC2 instances</p>
+                     <aside class="notes">
+                        I know are not 10.000 but it is a good start point
+                    </aside>
+				</section>
+
+				<section>
+                    <p>We are worked on two different directions</p>
+                    <ul>
+                        <li>A procedure to manipulate the git's history</li>
+                        <li>A provisioning flow for our servers</li>
+                    </ul>
+                     <aside class="notes">
+                    </aside>
+				</section>
+
+				<section>
+                    <h1>Provision tools</h1>
+                     <aside class="notes">
+                         Souspance and start the battle
+                    </aside>
+				</section>
+
+				<section data-background="./img/il-buono-il-brutto-e-il-cattivo.jpg" >
+				</section>
+
+				<section>
+                    We have a specific and unique use case.<br>
+                    With PHP and the AWS sdk could work!!
+				</section>
+
+				<section data-background="./img/Frankenstein-Junior1.jpg">
+				</section>
+
+				<section>
+                    <h2>ZF Parallel Split</h2>
+                    <small><a href="https://goo.gl/gRCiub" target="_blank">github.com/gianarb/zf-parallel-split</a></small>
+                    <p>This project contains the procedure to boot one server for component and inject the init boot script</p>
+				</section>
+
+				<section>
+                    <pre><code data-lang="php" style="max-height: 800px;" data-trim data-noescape>
+return [
+    "aws" => [
+        'key' => '',
+        'secret' => '',
+        'region' => "us-east-1",
+    ],
+    "githubToken" => "",
+    "iam" => [
+        "name" =>,
+    ],
+    "keyName" => "gianarb-def",
+    "bucketBackup" => "zend-split",
+    "sshPath" => "ssh/",
+    "components" => [
+        "Authentication",
+        "Barcode",
+        "Cache",
+        "...",
+    ]
+];
+                    </code></pre>
+				</section>
+
+				<section>
+                    <pre><code data-lang="php" style="max-height: 800px;" data-trim data-noescape>
+$result = $client->runInstances(array(
+    "ImageId" => "ami-d05e75b8",
+    "MinCount" => 1,
+    "MaxCount" => 1,
+    "InstanceType" => "t2.medium",
+    "InstanceInitiatedShutdownBehavior" => "terminate",
+    "KeyName" => $config['keyName'],
+    "UserData" => base64_encode(render($config, $component)),
+    'IamInstanceProfile' => array(
+        'Name' => $config['iam']['name'],
+    ),
+));
+                    </code></pre>
+                    <p>Launch a <span>t2.medium</span> for each component and create a specific <span>UserData</span> script</p>
+				</section>
+
+				<section>
+                    <pre><code data-lang="bash" style="max-height: 800px;" data-trim data-noescape>
+#!/bin/bash
+RAM_DISK=3000m
+mount -t tmpfs -o size=$RAM_DISK tmpfs /root
+add-apt-repository -y ppa:git-core/ppa
+apt-get update
+apt-get install -y python2.7 curl git php5 php5-curl php5-cli
+git config --global user.name "Gianluca Arbezzano"
+git config --global user.email gianarb92@gmail.com
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+pip install awscli
+aws s3 cp s3://%sshPath%/id_rsa ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa
+aws s3 cp s3://%sshPath%/id_rsa.pub ~/.ssh/id_rsa.pub
+echo "Host *
+     StrictHostKeyChecking no" > ~/.ssh/config
+git clone https://github.com/zendframework/component-split.git /root/component-split
+cd /root/component-split
+./bin/split.sh -c %componentName% -r ./zf2-migrate
+cd zf2-migrate
+git remote add origin git@github.com:zendframework/zend-%componentName%
+git push origin master
+git push --tags origin
+aws s3 cp /var/log/cloud-init-output.log  s3://%bucketBackup%/zend-%componentName%.log
+halt
+                    </code></pre>
+				</section>
+
+				<section>
+                <pre><code data-lang="bash" style="max-height: 800px;" data-trim data-noescape>
+#!/bin/bash
+RAM_DISK=3000m
+mount -t tmpfs -o size=$RAM_DISK tmpfs /root
+
+add-apt-repository -y ppa:git-core/ppa
+apt-get update
+apt-get install -y python2.7 curl git php5 php5-curl php5-cli
+git config --global user.name "Gianluca Arbezzano"
+git config --global user.email gianarb92@gmail.com
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+                    </code></pre>
+                    <p>Work in RAM to increase the performance and prepare the environment</p>
+				</section>
+
+				<section>
+                    <pre><code data-lang="bash" style="max-height: 800px;" data-trim data-noescape>
+pip install awscli
+aws s3 cp s3://%sshPath%/id_rsa ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa
+aws s3 cp s3://%sshPath%/id_rsa.pub ~/.ssh/id_rsa.pub
+                    </code></pre>
+                    <p>Install aws cli tool</p>
+				</section>
+
+				<section>
+                    <pre><code data-lang="bash" style="max-height: 800px;" data-trim data-noescape>
+echo "Host *
+     StrictHostKeyChecking no" > ~/.ssh/config
+git clone https://github.com/zendframework/component-split.git \
+    /root/component-split
+
+cd /root/component-split
+./bin/split.sh -c %componentName% -r ./zf2-migrate
+cd zf2-migrate
+git remote add \
+    origin git@github.com:zendframework/zend-%componentName%
+git push origin master
+git push --tags origin
+                    </code></pre>
+                    <p>Clone the repository with the split procedure, run it and push the new codebase into the component's repository</p>
+				</section>
+
+				<section>
+                    <pre><code data-lang="bash" style="max-height: 800px;" data-trim data-noescape>
+aws s3 cp /var/log/cloud-init-output.log \
+    s3://%bucketBackup%/zend-%componentName%.log
+halt
+                    </code></pre>
+                    <p>move the output on s3</p>
+				</section>
 			</div>
 
 		</div>
@@ -60,8 +344,8 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
+				controls: false,
+				progress: false,
 				history: true,
 				center: true,
 
